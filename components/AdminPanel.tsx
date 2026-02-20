@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   LayoutDashboard, 
   Users, 
@@ -995,7 +995,6 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ onExit }) => {
                                 const total = booking.Total || booking.totalAmount || 0;
                                 const payment = String(booking.Payment || booking.payment || '').toLowerCase();
                                 const isPaid = payment.includes('paid');
-                                const status = String(booking.Status || booking.status || 'Confirmed');
 
                                 // Short ID
                                 const shortId = id?.split('-').pop() || idx + 1;
